@@ -15,4 +15,18 @@
 
   (define (fail) (amb '()))
 
-  (export amb fail))
+  ;; amb with lazy evaluation
+  (define-syntax do-amb
+    (syntax-rules ()
+      ((do-amb expr ...)
+       ((amb (list (lambda () expr) ...))))))
+
+  (define (save-backtrack) path)
+  (define (restore-backtrack p) (set! path p))
+  (define (clear-backtrack) (set! path '()))
+
+  (export amb fail
+	  do-amb
+	  save-backtrack
+	  restore-backtrack
+	  clear-backtrack))
