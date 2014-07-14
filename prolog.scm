@@ -2,8 +2,8 @@
   (import (scheme base))
   (import (scheme cxr))
   (import (picrin macro))
-  (import (picrin amb))
   (import (srfi 1))
+  (import (prolog amb))
 
   ;; prolog variable
   (define-record-type variable
