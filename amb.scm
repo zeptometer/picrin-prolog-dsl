@@ -1,4 +1,4 @@
-(define-library (picrin amb)
+(define-library (prolog amb)
   (import (scheme base))
 
   (define path '())
