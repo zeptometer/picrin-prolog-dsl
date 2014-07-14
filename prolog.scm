@@ -136,4 +136,4 @@
 				       table)
 				 ,@body)))))))
 
-  (export <- with-query))
+  (export <- with-query prove-query))
