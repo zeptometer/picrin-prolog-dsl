@@ -135,4 +135,5 @@
 			  (,_let ,(map (lambda (p) `(,(car p) (,_fullbind ',(cadr p) bind)))
 				       table)
 				 ,@body)))))))
-  )
+
+  (export <- with-query))
